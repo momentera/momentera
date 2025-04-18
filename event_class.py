@@ -53,7 +53,7 @@ class EventPlanner:
         if self.voice_settings.get("enabled"):
             speak(text, self.voice_settings)
 
-def _parse_date(self, date_str):
+    def _parse_date(self, date_str):
         """
         Converts a date string in 'YYYY-MM-    DD' format to a date object.
     
