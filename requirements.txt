@@ -1,0 +1,6 @@
+following are the required tools to run the programme
+1. pyttsx3
+pip install pyttsx3
+
+2. python3
+https://www.python.org/downloads/
