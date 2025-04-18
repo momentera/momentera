@@ -53,6 +53,21 @@ class EventPlanner:
         if self.voice_settings.get("enabled"):
             speak(text, self.voice_settings)
 
+def _parse_date(self, date_str):
+        """
+        Converts a date string in 'YYYY-MM-    DD' format to a date object.
+    
+        Args:
+            date_str (str): The date string.
+
+        Returns:
+            datetime.date: Parsed date or     None if invalid.
+        """
+        try:
+            return     datetime.datetime.strptime(date_str, "%Y-%m-%d").date()
+        except (ValueError, TypeError):
+            return None
+    
     def _input_valid(self, prompt, data_type, extra_check=None, max_retries=5):
         """
         Handles validated input from the user for various data types like date, time, float, and int.
